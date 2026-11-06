@@ -8,25 +8,27 @@ Exploring transfer learning and staged fine-tuning of different architectures fo
 ├── Makefile           
 ├── README.md          
 ├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
+│   ├── external       
+│   ├── interim        
+│   ├── isic2020-224   <- ISIC 2020 competition training set
+│   ├── ph2_cache      <- external PH2 dermoscopy test set
+│   ├── processed
+│   └── raw            
 │
 ├── docs               
 │
-├── models             <- Trained and serialized models, model predictions, or model summaries
+├── models             <- trained and serialized models, model predictions, or model summaries
 │
-├── notebooks          <- Jupyter notebooks. 
+├── notebooks          <- jupyter notebooks. 
 │
-├── pyproject.toml     <- Project configuration file with package metadata for melanoma_cls
+├── pyproject.toml     <- project configuration file with package metadata for melanoma_cls
 │
 ├── references         
 │
 ├── reports            
 │   └── figures        
 │
-├── requirements.txt   <- The requirements file generated with `pip freeze > requirements.txt`
+├── requirements.txt   <- the requirements file generated with `pip freeze > requirements.txt`
 │
 ├── setup.cfg          
 │
@@ -34,18 +36,18 @@ Exploring transfer learning and staged fine-tuning of different architectures fo
     │
     ├── __init__.py             
     │
-    ├── config.py               <- Useful variables and configuration
+    ├── config.py               <- useful variables and configuration
     │
-    ├── dataset.py              <- Scripts to download or generate data
+    ├── dataset.py              <- scripts to download or generate data
     │
-    ├── features.py             <- Code to create features for modeling
+    ├── features.py             <- code to create features for modeling
     │
     ├── modeling                
     │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
+    │   ├── predict.py          <- code to run model inference with trained models          
+    │   └── train.py            <- code to train models
     │
-    └── plots.py                <- Code to create visualizations
+    └── plots.py                <- code to create visualizations
 ```
 
 --------

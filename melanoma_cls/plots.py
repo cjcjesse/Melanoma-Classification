@@ -125,7 +125,7 @@ def generate_test_gradcam(ph2_df, ph2_img_path, fold_state_dict, test_transform,
         if model_type == 'densenet':
             target_layers = [fold_model.features.norm5]
         if model_type == 'resnet':
-            target_layers = [fold_model.layer4[-1].conv2]
+            target_layers = [fold_model.layer4[-1]]
         if model_type == 'swin':
             target_layers = [fold_model.norm]
 

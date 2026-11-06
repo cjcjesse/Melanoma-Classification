@@ -8,7 +8,7 @@ from tqdm.auto import tqdm
 from torch.utils.data import DataLoader
 from torch.utils.data.sampler import WeightedRandomSampler
 from torchmetrics.classification import BinaryAveragePrecision
-from torchvision.models import resnet18, densenet121, swin_t
+from torchvision.models import resnet50, densenet121, swin_t
 from sklearn.model_selection import StratifiedGroupKFold
 from melanoma_cls.dataset import ISICDataset
 
@@ -80,7 +80,7 @@ def fold_init(df, root_dir, fold_idx, train_idx, val_idx, train_transform, val_t
         model.classifier = nn.Linear(num_features, 2, bias=True)
         model = model.to(device)
     if model_type == 'resnet':
-        model = resnet18(weights='IMAGENET1K_V1')
+        model = resnet50(weights='IMAGENET1K_V1')
         for param in model.parameters():
             param.requires_grad = False
         num_features = model.fc.in_features
